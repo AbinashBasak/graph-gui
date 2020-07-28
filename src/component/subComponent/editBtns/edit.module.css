@@ -1,0 +1,17 @@
+.list {
+    display: flexbox !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.selected {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.selectedIcon {
+    color: white !important;
+}
+.icon {
+    color: grey !important;
+}
