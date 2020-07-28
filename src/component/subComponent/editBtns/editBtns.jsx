@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { List, ListItem, ListItemIcon, makeStyles } from '@material-ui/core';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import EditIcon from '@material-ui/icons/Edit';
+import TimelineIcon from '@material-ui/icons/Timeline';
 
 import styles from './edit.module.css';
-import Prims from '../../../algorithims/prims';
-import { execute, clearListner } from '../../canvas/shape';
+import { clearListner } from '../../canvas/shape';
 
 import { connect } from 'react-redux';
 import * as toolActions from '../../../store/action/createAction';
@@ -46,10 +45,6 @@ const SimpleList = props => {
       default: break
     };
   }
-  const handel = () => {
-    let edge = Prims(props.edges, props.vertices.length)
-    execute(edge, props.vertices)
-  }
 
   return (
     <div className={classes.root}>
@@ -61,12 +56,7 @@ const SimpleList = props => {
         </ListItem>
         <ListItem className={active === 2 ? styles.selected : null} onClick={() => handelClick(2)}>
           <ListItemIcon>
-            <DraftsIcon className={active === 2 ? styles.selectedIcon : styles.icon} />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem className={active === 2 ? styles.selected : null} onClick={() => handel()}>
-          <ListItemIcon>
-            <DraftsIcon className={active === 2 ? styles.selectedIcon : styles.icon} />
+            <TimelineIcon className={active === 2 ? styles.selectedIcon : styles.icon} />
           </ListItemIcon>
         </ListItem>
       </List>

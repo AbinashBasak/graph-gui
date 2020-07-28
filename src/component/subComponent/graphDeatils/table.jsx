@@ -24,7 +24,7 @@ export default function DenseTable(props) {
       label = window.prompt('Enter label ');
     } else {
       weight = window.prompt('Enter weight ')
-      while (weight == '' || !Number(weight)) {
+      while (weight === '' || !Number(weight)) {
         if (weight === '0') break
         if (weight === null) return
         weight = window.prompt('Enter weight\nWeight must be a number ')
